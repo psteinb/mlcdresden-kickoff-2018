@@ -1,0 +1,72 @@
+---
+title: "comparing loop styles for reductions in C++"
+output: html_document
+---
+
+## Problem description
+
+I am trying to reproduce Matt Godbolt's example from his [CppCon2017 talk](https://www.youtube.com/watch?v=bSkpMdDe4g4&list=PLHTh1InhhwT6bwIpRk0ZbCA0N2p1taxd6&index=5)
+
+
+## Experiments 
+
+Compile the source code in this directory as by typing:
+```
+$ make build
+```
+if you want to play with compiler flags, use
+```
+$ CXXFLAGS="-O2" make build
+```
+
+To run the benchmarks used in the plots below, do 
+```
+$ make run
+```
+or 
+
+```
+$./forloop_style_with_args_templated --benchmark_filter=.*/134217728 --benchmark_repetitions=20 --benchmark_out_format=csv --benchmark_out=loops_compared.csv
+```
+
+### Results
+
+The following R snippets assume that you have the complete `tidyverse` installed. In order to do this, used
+
+```
+$ R
+> install.packages("tidyverse")
+```
+
+So let's see what the data has to offer:
+
+```{r load_data, echo=FALSE}
+library(dplyr, warn.conflicts=FALSE)
+library(readr)
+library(tidyr)
+library(ggplot2)
+
+#loads the csv file
+benchdata = read_csv("loops_compared.csv", skip=3,col_types = cols()) %>% 
+#does some wrangling of the data to make it optimal for plotting
+filter(grepl('mean|stddev', name)) %>% 
+separate(name,c("name","n_items"),sep="/") %>% 
+separate(n_items,c("size","property"),sep="_",convert = TRUE) %>% 
+separate(name,c("benchmark","container_type"),sep="<") %>%
+mutate(container_type = as.factor(gsub('>', '', container_type)), property = as.factor(property)) %>%
+mutate(real_time_ms = real_time / 10e6) %>% select(benchmark, container_type, property,real_time_ms)
+
+#rename the columns
+benchdata_wide = spread(benchdata, property, real_time_ms)
+names(benchdata_wide)[names(benchdata_wide)=="mean"] <- "mean_realtime_ms"
+names(benchdata_wide)[names(benchdata_wide)=="stddev"] <- "stddev_realtime_ms"
+
+#do the plot
+compare_plot = ggplot(benchdata_wide,aes(benchmark,mean_realtime_ms,color=container_type)) + theme_bw()  
+compare_plot = compare_plot + geom_point(size=5,position = position_dodge(width=.5))  
+compare_plot = compare_plot + geom_errorbar(aes(ymin = mean_realtime_ms-stddev_realtime_ms, ymax = mean_realtime_ms+stddev_realtime_ms), width = 0.07,position = position_dodge(width=.5))  
+compare_plot = compare_plot + xlab("benchmark") + ylab("realtime / [ms]")  
+
+compare_plot  
+```  
+
