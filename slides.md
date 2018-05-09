@@ -2,7 +2,7 @@
 title: Deep Learning in the Cloud?
 author: Peter Steinbach
 origin: MPI CBG, Scionics Computer Innovation GmbH, 
-email: steinbach@scionics.de, [@psteinb_](https://twitter.com/psteinb_)
+email: steinbach@scionics.de, @psteinb_
 date: May 15, 2018, MLCDresden
 ---
 
