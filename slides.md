@@ -2,7 +2,8 @@
 title: Deep Learning in the Cloud?
 author: Peter Steinbach
 origin: MPI CBG, Scionics Computer Innovation GmbH, 
-email: steinbach@scionics.de, @psteinb_
+email: steinbach@scionics.de
+twitter: psteinb_
 date: May 15, 2018, MLCDresden
 ---
 
@@ -90,7 +91,7 @@ date: May 15, 2018, MLCDresden
 
 # [Deeprace](https://github.com/psteinb/deeprace)
 
-## Bare-metal versus container
+## Bare-metal versus [singularity container](https://singularity.lbl.gov)
 
 .container-fluid[
 
@@ -98,14 +99,14 @@ date: May 15, 2018, MLCDresden
 
 .col[
 
-![](img/deeprace-full-vs-singularity.png){ class="img-fluid" style="width: 90%;" }  
+![](img/deeprace-full-vs-singularity.png){ class="img-fluid" style="width: 100%;" }  
 
 
 .]
 
 .col[
 
-- taining on taurus K80 nodes   
+- training on taurus K80 nodes   
 ([Thank you, ZiH!]{.class class="fragment highlight-red"})
 
 - CIFAR10 data (1.1 GB, 70k images)
