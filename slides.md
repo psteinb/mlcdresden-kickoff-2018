@@ -106,8 +106,7 @@ date: May 15, 2018, MLCDresden
 
 .col-4[
 
-- training on taurus K80 nodes   
-([Thank you, ZiH!]{.class class="fragment highlight-red"})
+- training on taurus K80 nodes
 
 - CIFAR10 data (1.1 GB, 70k images)
 
@@ -119,12 +118,15 @@ date: May 15, 2018, MLCDresden
 
 .]
 
+[Thanks for the CPU/GPU time, ZiH!]{.class class="fragment highlight-blue"}
+
 
 ## Hardware comparison
 
 
-![](img/deeprace-short-hw.svg){ class="img-fluid" style="width: 90%;" }  
+![](img/deeprace-short-hw.svg){ class="img-fluid" style="width: 80%;" }  
 
+[Thanks for the CPU/GPU time, ZiH!]{.class class="fragment highlight-blue"}
 
 :notes[
 
@@ -138,6 +140,7 @@ date: May 15, 2018, MLCDresden
 
 ![](img/deeprace-frameworks.svg){ class="img-fluid" style="width: 70%;"}  
 
+[Thanks for the CPU/GPU time, MPI CBG!]{.class class="fragment highlight-blue"}
 
 :notes[
 
@@ -151,6 +154,8 @@ date: May 15, 2018, MLCDresden
 ## Cloud vs Bare-metal
 
 ![](img/deeprace-short-runtimes-vs-cloud.svg){ class="img-fluid" style="width: 80%;" }  
+
+[Thanks to Scionics for the cloud credits!]{.class class="fragment highlight-blue"}
 
 :notes[
 
