@@ -54,7 +54,7 @@ date: May 15, 2018, MLCDresden
 
 ## Deep Learning Bootcamp {#bc style="font-size: 1.5em"}
 
-https://indico.mpi-cbg.de/e/deeplearning2018
+[indico.mpi-cbg.de/e/deeplearning2018](https://indico.mpi-cbg.de/e/deeplearning2018)
 
 - registration opens soon
 - in cooperation with [MPI CBG](https://www.mpi-cbg.de), [CSBD](https://www.csbdresden.de), [HZDR](https://www.hzdr.de), [Zalando](https://research.zalando.com/) and [Uniklinikum](https://www.uniklinikum-dresden.de/de)
