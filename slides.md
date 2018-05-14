@@ -11,13 +11,12 @@ date: May 15, 2018, MLCDresden
 
 ## For the next 10 Minutes ... {#agenda style="font-size: 1.5em"}
 
-1. Peter who?
-2. MPI CBG
-3. Benchmarks in Deep Learning
-4. Results
-5. Breathe again!
+1. MPI CBG
+2. Benchmarks in Deep Learning
+3. Results
+4. Breathe again!
 
-# About me
+# MPI CBG
 
 ## Scientific Software Engineer
 
@@ -52,6 +51,14 @@ date: May 15, 2018, MLCDresden
 - employer = Scionics
 
 :]
+
+## Deep Learning Bootcamp {#bc style="font-size: 1.5em"}
+
+https://indico.mpi-cbg.de/e/deeplearning2018
+
+- registration opens soon
+- in cooperation with [MPI CBG](https://www.mpi-cbg.de), [CSBD](https://www.csbdresden.de), [HZDR](https://www.hzdr.de), [Zalando](https://research.zalando.com/) and [Uniklinikum](https://www.uniklinikum-dresden.de/de)
+- one week of introduction to deep learning basics
 
 
 # Deep Learning Benchmarks
