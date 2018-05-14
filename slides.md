@@ -77,14 +77,14 @@ date: May 15, 2018, MLCDresden
 ## Observations
 
 - [dawnbench](https://dawn.cs.stanford.edu/benchmark/):
-    + more a competition from single run
+    + more a competition from **1 single run**
     + model implementation not fixed
     + hardware coverage not uniform
     
 - [mlperf](https://mlperf.org/)
     + just announced
     + aspiring to be a SPEC for DL
-    + mean of 5 runs :/
+    + **mean of 5 runs**
     
 - rest: Mostly not reproducible or just single runs!
 
@@ -97,14 +97,14 @@ date: May 15, 2018, MLCDresden
 
 .row align-items-center[
 
-.col[
+.col-8[
 
-![](img/deeprace-full-vs-singularity.png){ class="img-fluid" style="width: 100%;" }  
+![](img/deeprace-full-vs-singularity.svg){ class="img-fluid" style="width: 100%;" }  
 
 
 .]
 
-.col[
+.col-4[
 
 - training on taurus K80 nodes   
 ([Thank you, ZiH!]{.class class="fragment highlight-red"})
@@ -123,7 +123,7 @@ date: May 15, 2018, MLCDresden
 ## Hardware comparison
 
 
-![](img/deeprace-short-hw.png){ class="img-fluid" style="width: 90%;" }  
+![](img/deeprace-short-hw.svg){ class="img-fluid" style="width: 90%;" }  
 
 
 :notes[
@@ -136,30 +136,45 @@ date: May 15, 2018, MLCDresden
 
 ## Framework comparison
 
+![](img/deeprace-frameworks.svg){ class="img-fluid" style="width: 70%;"}  
 
+
+:notes[
+
+- single GPU varies minimally
+- framework difference small
+- no clear conclusion from just 2 models
+
+:]
 
 
 ## Cloud vs Bare-metal
 
+![](img/deeprace-short-runtimes-vs-cloud.svg){ class="img-fluid" style="width: 80%;" }  
 
+:notes[
+
+- cloud appears on par for resnet models
+
+:]
 
 
 # Summary
 
-## So far ...
+## So far ... {#sofar style="font-size: 1.5em"}
 
 - benchmarks have been very useful learning tool
 
-- for resnet type models and alike:
+- for resnet models, benchmarks ...
 
     + make decision for hardware easier
-    + makes framework decision clearer
+    + makes framework options clearer
     + resnet30/50 on K80 GPUs: cloud == HPC
     
 
-## There is more to come ...
+## There is more to come ... {#more style="font-size: 1.5em"}
 
-- bare-metal versus cloud not generally answered (disk space, network performce, ...)
+- bare-metal-versus-cloud not answered (disk space, network performce, ...)
 
 - stay tuned on [github.com/psteinb/deeprace](github.com/psteinb/deeprace)
 

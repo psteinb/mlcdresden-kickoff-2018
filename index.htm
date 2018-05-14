@@ -104,7 +104,7 @@
 <ul>
 <li><a href="https://dawn.cs.stanford.edu/benchmark/">dawnbench</a>:
 <ul>
-<li>more a competition from single run</li>
+<li>more a competition from <strong>1 single run</strong></li>
 <li>model implementation not fixed</li>
 <li>hardware coverage not uniform</li>
 </ul></li>
@@ -112,7 +112,7 @@
 <ul>
 <li>just announced</li>
 <li>aspiring to be a SPEC for DL</li>
-<li>mean of 5 runs :/</li>
+<li><strong>mean of 5 runs</strong></li>
 </ul></li>
 <li>rest: Mostly not reproducible or just single runs!</li>
 </ul>
@@ -121,12 +121,12 @@
 <h2>Bare-metal versus <a href="https://singularity.lbl.gov">singularity container</a></h2>
 <div class="container-fluid">
 <div class="row align-items-center">
-<div class="col">
+<div class="col-8">
 <figure>
-<img src="img/deeprace-full-vs-singularity.png" class="img-fluid" style="width: 100%;" />
+<img src="img/deeprace-full-vs-singularity.svg" class="img-fluid" style="width: 100%;" />
 </figure>
 </div>
-<div class="col">
+<div class="col-4">
 <ul>
 <li><p>training on taurus K80 nodes<br />
 (<span class="class fragment highlight-red">Thank you, ZiH!</span>)</p></li>
@@ -139,7 +139,7 @@
 </section><section id="hardware-comparison" class="slide level2">
 <h2>Hardware comparison</h2>
 <figure>
-<img src="img/deeprace-short-hw.png" class="img-fluid" style="width: 90%;" />
+<img src="img/deeprace-short-hw.svg" class="img-fluid" style="width: 90%;" />
 </figure>
 <aside class="notes">
 <ul>
@@ -149,24 +149,42 @@
 </aside>
 </section><section id="framework-comparison" class="slide level2">
 <h2>Framework comparison</h2>
+<figure>
+<img src="img/deeprace-frameworks.svg" class="img-fluid" style="width: 70%;" />
+</figure>
+<aside class="notes">
+<ul>
+<li>single GPU varies minimally</li>
+<li>framework difference small</li>
+<li>no clear conclusion from just 2 models</li>
+</ul>
+</aside>
 </section><section id="cloud-vs-bare-metal" class="slide level2">
 <h2>Cloud vs Bare-metal</h2>
+<figure>
+<img src="img/deeprace-short-runtimes-vs-cloud.svg" class="img-fluid" style="width: 80%;" />
+</figure>
+<aside class="notes">
+<ul>
+<li>cloud appears on par for resnet models</li>
+</ul>
+</aside>
 </section></section>
-<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="so-far-..." class="slide level2">
+<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="sofar" class="slide level2" style="font-size: 1.5em">
 <h2>So far ...</h2>
 <ul>
 <li><p>benchmarks have been very useful learning tool</p></li>
-<li><p>for resnet type models and alike:</p>
+<li><p>for resnet models, benchmarks ...</p>
 <ul>
 <li>make decision for hardware easier</li>
-<li>makes framework decision clearer</li>
+<li>makes framework options clearer</li>
 <li>resnet30/50 on K80 GPUs: cloud == HPC</li>
 </ul></li>
 </ul>
-</section><section id="there-is-more-to-come-..." class="slide level2">
+</section><section id="more" class="slide level2" style="font-size: 1.5em">
 <h2>There is more to come ...</h2>
 <ul>
-<li><p>bare-metal versus cloud not generally answered (disk space, network performce, ...)</p></li>
+<li><p>bare-metal-versus-cloud not answered (disk space, network performce, ...)</p></li>
 <li><p>stay tuned on <a href="github.com/psteinb/deeprace" class="uri">github.com/psteinb/deeprace</a></p></li>
 <li><p>looking for sponsors and/or contributors (distributed training, inference benchmarks)</p></li>
 </ul>
